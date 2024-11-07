@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sty.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Text to Speech Converter</h1>
+        <input class="input" type="text" id="input" placeholder="Enter text here..." />
+        <button class="btn-primary" onclick="speak()">Speak</button>
+        <button class="btn-download" onclick="downloadSpeech()">Download Speech</button>
+
+        <!-- Use-Case Scenarios -->
+        <div class="use-cases">
+            
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Accessibility</h3>
+                        <p>Hover Me for learn More</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Accessibility</h3>
+                        <p>Assist people with visual impairments by converting text to speech.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Content Creation</h3>
+                        <p>Hover Me for learn More</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Content Creation</h3>
+                        <p>Create audio for presentations or social media using this tool.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <script src="w.js"></script>
+</body>
+
+</html>
