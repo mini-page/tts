@@ -1,9 +1,16 @@
 
 /* Root Variables for Color and Sizing */
-::selection{
+/* For cross-browser compatibility */
+::selection {
   background-color: coral;
-    color: white;
+  color: white;
 }
+
+::-moz-selection { /* For Firefox */
+  background-color: coral;
+  color: white;
+}
+
 :root {
     --main-bg-color: #F3F3F3;
     --accent-color: #ff4500;
