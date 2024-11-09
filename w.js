@@ -24,7 +24,7 @@ function downloadSpeech() {
     const url = URL.createObjectURL(audioBlob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "speech.txt";
+    a.download = "speech.mp3";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
