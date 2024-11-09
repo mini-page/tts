@@ -1,5 +1,9 @@
 
 /* Root Variables for Color and Sizing */
+::selection{
+  background-color: coral;
+    color: white;
+}
 :root {
     --main-bg-color: #F3F3F3;
     --accent-color: #ff4500;
