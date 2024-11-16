@@ -1,23 +1,23 @@
-
 /* Root Variables for Color and Sizing */
 /* For cross-browser compatibility */
 ::selection {
-  background-color: coral;
-  color: white;
+    background-color: var(--accent-color);
+    color: white;
 }
 
-::-moz-selection { /* For Firefox */
-  background-color: coral;
-  color: white;
+::-moz-selection {
+    /* For Firefox */
+    background-color: var(--accent-color);
+    color: white;
 }
 
 :root {
-    --main-bg-color: #F3F3F3;
+    --main-bg-color: #f3f3f3;
     --accent-color: #ff4500;
     --secondary-accent: #ff6026;
     --card-bg-color: #ffe7de;
-    --box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    --card-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
+    --box-shadow: 0px 8px 15px #0000001a;
+    --card-box-shadow: 0 10px 15px 0 #00000033;
     --border-radius: 10px;
     --transition-speed: 0.5s;
 }
@@ -28,18 +28,19 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #333;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: var(--main-bg-color);
     background-image: linear-gradient(0deg, transparent 24%, #E1E1E1 25%, #E1E1E1 26%, transparent 27%, transparent 74%, #E1E1E1 75%, #E1E1E1 76%, transparent 77%, transparent),
-        linear-gradient(90deg, transparent 24%, #E1E1E1 25%, #E1E1E1 26%, transparent 27%, transparent 74%, #E1E1E1 75%, #E1E1E1 76%, transparent 77%, transparent);
-    background-size: 55px 55px;
+        linear-gradient(90deg, transparent 24%, #d5d5d5 25%, #E1E1E1 26%, transparent 27%, transparent 74%, #E1E1E1 75%, #E1E1E1 76%, transparent 77%, transparent);
+    background-size: 80px 80px;
     padding: 20px;
 }
 
 /* Container */
-.container {
+.containers {
     background: #fff;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -52,6 +53,13 @@ body {
 h1 {
     color: var(--accent-color);
     margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+h3{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 /* Input Field */
@@ -81,7 +89,7 @@ h1 {
     background-color: var(--accent-color);
     color: white;
     border-radius: 10em;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 600;
     padding: 1em 2em;
     cursor: pointer;
@@ -99,7 +107,7 @@ h1 {
 
 /* Use-Case Card Styles */
 .use-cases {
-    margin: 40px;
+    /* margin: 10px; */
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -107,17 +115,17 @@ h1 {
 
 .flip-card {
     background-color: transparent;
-    perspective: 1000px;
-    width: 100%;
-    max-width: 250px;
-    padding: 20px;
-    margin: 15px
+    /* perspective: 1000px; */
+    width: 50%;
+    max-width: 400px;
+    /* padding: 10px; */
+    margin-top: 10px;
 }
 
 .flip-card-inner {
     position: relative;
-    width: 100%;
-    height: 200px;
+    /* width: 100%; */
+    height: 250px;
     transition: transform 1.0s ease-in;
     transform-style: preserve-3d;
     text-align: center;
@@ -131,12 +139,12 @@ h1 {
 .flip-card-back {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 85%;
     border-radius: var(--border-radius);
     backface-visibility: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     box-shadow: var(--card-box-shadow);
     padding: 15px;
@@ -177,30 +185,32 @@ h1 {
         width: 350px;
         padding: 10px;
     }
-
-    .flip-card-inner {
-        height: 250px;
-        width: 140px;
-    }
+    
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 15px;
+    .use-cases {
+        /* margin: 20px; */
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        /* gap: 20px; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* place-items: center; */
     }
 
     .flip-card {
-        max-width: 150px;
-        padding: 5px;
-        margin: 10px;
+        max-width: 210px;
+        justify-self: center;
     }
 
     .flip-card-inner {
-        height: 150px;
+        height: 260px;
+        /* width: 200px; */
     }
 
     h1 {
-        font-size: 1.2em;
+        font-size: 1.7em;
     }
 
     .btn-primary,
